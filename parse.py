@@ -3,29 +3,47 @@ import re
 import socket
 import time
 
-collected = []
+class RsyslogStatsToGraphite():
 
-stat_lines = deque(open('rsyslog-stats.log'), 24)
+  def push_to_graphite(self, payload):
 
-for line in stat_lines:
+    carbon_server = '10.20.29.100'
+    carbon_port = 2003
+    sock = socket.socket()
+    sock.connect((carbon_server, carbon_port))
 
-  parsed = line.split(': ',2)
+    for message in payload:
+      sock.sendall(message)
 
-  if parsed[1].count("(*:") > 0:
-    outer = [re.sub(r"(^imudp)\(\*\:(\d\d\d)\)", r'\1_\2', parsed[1])]
-  else:
-    outer = [parsed[1].replace(' ','_')]
+    sock.close()
 
-  inner = parsed[2].split(' ', -1)
-  
-  outer.insert(0, socket.gethostname())
-  outer.insert(0, "rsyslog-stats")
+  def parse(self, filename):
 
-  container = [['.'.join(outer)]]
-  container.append(inner)
-  collected.append(container)
-  
-for host in collected:
-  for stats in host[1]:
-    if not "\n" in stats:
-      print ''.join(host[0]) + "." + re.sub(r'(\w)\=(\d+)', r'\1 \2', stats) + " " + str(int(time.time()))
+    collected = []
+    payload = []
+    stat_lines = deque(open(filename), 24)
+
+    for line in stat_lines:
+
+      parsed = line.split(': ',2)
+
+      if parsed[1].count("(*:") > 0:
+        outer = [re.sub(r"(^imudp)\(\*\:(\d\d\d)\)", r'\1_\2', parsed[1])]
+      else:
+        outer = [parsed[1].replace(' ','_')]
+
+      inner = parsed[2].split(' ', -1)
+
+      outer.insert(0, socket.gethostname())
+      outer.insert(0, "rsyslog-stats")
+
+      container = [['.'.join(outer)]]
+      container.append(inner)
+      collected.append(container)
+
+    for host in collected:
+      for stats in host[1]:
+        if not "\n" in stats:
+          payload.append(''.join(host[0]) + "." + re.sub(r'(\w)\=(\d+)', r'\1 \2', stats) + " " + str(int(time.time())) + "\n")
+
+    self.push_to_graphite(payload)
