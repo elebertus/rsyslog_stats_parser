@@ -1,0 +1,48 @@
+Wed Mar 27 22:30:43 2013: imuxsock: submitted=169 ratelimit.discarded=0 ratelimit.numratelimiters=77 
+Wed Mar 27 22:30:43 2013: action 1: processed=34 failed=0 
+Wed Mar 27 22:30:43 2013: action 2: processed=207 failed=0 
+Wed Mar 27 22:30:43 2013: action 3: processed=22 failed=0 
+Wed Mar 27 22:30:43 2013: action 4: processed=0 failed=0 
+Wed Mar 27 22:30:43 2013: action 5: processed=0 failed=0 
+Wed Mar 27 22:30:43 2013: action 6: processed=0 failed=0 
+Wed Mar 27 22:30:43 2013: action 7: processed=141 failed=0 
+Wed Mar 27 22:30:43 2013: action 8: processed=0 failed=0 
+Wed Mar 27 22:30:43 2013: action 9: processed=0 failed=0 
+Wed Mar 27 22:30:43 2013: action 10: processed=0 failed=0 
+Wed Mar 27 22:30:43 2013: action 11: processed=0 failed=0 
+Wed Mar 27 22:30:43 2013: action 12: processed=0 failed=0 
+Wed Mar 27 22:30:43 2013: action 13: processed=0 failed=0 
+Wed Mar 27 22:30:43 2013: action 14: processed=0 failed=0 
+Wed Mar 27 22:30:43 2013: action 15: processed=142 failed=0 
+Wed Mar 27 22:30:43 2013: action 16: processed=0 failed=0 
+Wed Mar 27 22:30:43 2013: dynafile cache long_term_storage: requests=12553 level0=8000 missed=4 evicted=0 maxused=4 
+Wed Mar 27 22:30:43 2013: action 17: processed=12553 failed=0 
+Wed Mar 27 22:30:43 2013: imudp(*:514): submitted=0 
+Wed Mar 27 22:30:43 2013: imudp(*:514): submitted=0 
+Wed Mar 27 22:30:43 2013: imudp(*:514): submitted=12697 
+Wed Mar 27 22:30:43 2013: imudp(*:514): submitted=0 
+Wed Mar 27 22:30:43 2013: main Q: size=0 enqueued=12794 full=0 discarded.full=0 discarded.nf=0 maxqsize=95 
+Wed Mar 27 22:31:43 2013: imuxsock: submitted=169 ratelimit.discarded=0 ratelimit.numratelimiters=77 
+Wed Mar 27 22:31:43 2013: action 1: processed=34 failed=0 
+Wed Mar 27 22:31:43 2013: action 2: processed=207 failed=0 
+Wed Mar 27 22:31:43 2013: action 3: processed=22 failed=0 
+Wed Mar 27 22:31:43 2013: action 4: processed=0 failed=0 
+Wed Mar 27 22:31:43 2013: action 5: processed=0 failed=0 
+Wed Mar 27 22:31:43 2013: action 6: processed=0 failed=0 
+Wed Mar 27 22:31:43 2013: action 7: processed=141 failed=0 
+Wed Mar 27 22:31:43 2013: action 8: processed=0 failed=0 
+Wed Mar 27 22:31:43 2013: action 9: processed=0 failed=0 
+Wed Mar 27 22:31:43 2013: action 10: processed=0 failed=0 
+Wed Mar 27 22:31:43 2013: action 11: processed=0 failed=0 
+Wed Mar 27 22:31:43 2013: action 12: processed=0 failed=0 
+Wed Mar 27 22:31:43 2013: action 13: processed=0 failed=0 
+Wed Mar 27 22:31:43 2013: action 14: processed=0 failed=0 
+Wed Mar 27 22:31:43 2013: action 15: processed=142 failed=0 
+Wed Mar 27 22:31:43 2013: action 16: processed=0 failed=0 
+Wed Mar 27 22:31:43 2013: dynafile cache long_term_storage: requests=12591 level0=8016 missed=4 evicted=0 maxused=4 
+Wed Mar 27 22:31:43 2013: action 17: processed=12591 failed=0 
+Wed Mar 27 22:31:43 2013: imudp(*:514): submitted=0 
+Wed Mar 27 22:31:43 2013: imudp(*:514): submitted=0 
+Wed Mar 27 22:31:43 2013: imudp(*:514): submitted=12735 
+Wed Mar 27 22:31:43 2013: imudp(*:514): submitted=0 
+Wed Mar 27 22:31:43 2013: main Q: size=0 enqueued=12832 full=0 discarded.full=0 discarded.nf=0 maxqsize=95 
